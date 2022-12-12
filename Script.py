@@ -7,7 +7,7 @@ class script(object):
 ✯ ʟᴀɴɢᴜᴀɢᴇ : 𝙿𝚈𝚃𝙷𝙾𝙽 𝟹
 ✯ ᴅᴀᴛᴀ ʙᴀsᴇ : ᴍᴀɴɢᴏ ᴅʙ
 ✯ ʙᴏᴛ sᴇʀᴠᴇʀ : ᴋᴏʏᴇʙ
-✯ 𝙱𝚄𝙸𝙻𝙳 𝚅𝙴𝚁𝚂𝙸𝙾𝙽: ᴠ3.0.0"""
+✯ ʙᴜɪʟᴅ ᴠᴇʀsᴏɴ : ᴠ3"""
 
     SOURCE_TXT = """<b>NOTE:</b>
 ᴍᴀsᴛᴇʀ ɪs ᴀ ᴘʀɪᴠᴀᴛᴇ ʙᴏᴛ
@@ -18,7 +18,7 @@ class script(object):
 
     FILE_TXT = """ғɪʟᴇ sᴛᴏʀᴇ
 
-<b>𝙱𝚈 𝚄𝚂𝙸𝙽𝙶 𝚃𝙷𝙸𝚂 𝙼𝙾𝙳𝚄𝙻𝙴 𝚈𝙾𝚄 𝙲𝙰𝙽 𝚂𝚃𝙾𝚁𝙴 𝙵𝙸𝙻𝙴𝚂 𝙸𝙽 𝙼𝚈 𝙳𝙰𝚃𝙰𝙱𝙰𝚂𝙴 𝙰𝙽𝙳 𝙸 𝚆𝙸𝙻𝙻 𝙶𝙸𝚅𝙴 𝚈𝙾𝚄 𝙰 𝙿𝙴𝚁𝙼𝙰𝙽𝙴𝙽𝚃 𝙻𝙸𝙽𝙺  𝚃𝙾 𝙰𝙲𝙲𝙴𝚂𝚂 𝚃𝙷𝙴 𝚂𝙰𝚅𝙴𝙳 𝙵𝙸𝙻𝙴𝚂.𝙸𝙵 𝚈𝙾𝚄 𝚆𝙰𝙽𝚃 𝚃𝙾 𝙰𝙳𝙳 𝙵𝙸𝙻𝙴𝚂 𝙵𝚁𝙾𝙼 𝙰 𝙿𝚄𝙱𝙻𝙸𝙲 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 𝚂𝙴𝙽𝙳 𝚃𝙷𝙴 𝙵𝙸𝙻𝚆 𝙻𝙸𝙽𝙺 𝙾𝙽𝙻𝚈  𝙾𝚁 𝚈𝙾𝚄 𝚆𝙰𝙽𝚃 𝚃𝙾 𝙰𝙳𝙳 𝙵𝙸𝙻𝙴𝚂 𝙵𝚁𝙾𝙼 𝙰  𝙿𝚁𝙸𝚅𝙰𝚃𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 𝚈𝙾𝚄 𝙼𝚄𝚂𝚃 𝙼𝙰𝙺𝙴 𝙼𝙴 𝙰𝙳𝙼𝙸𝙽 𝙾𝙽 𝚃𝙷𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 𝚃𝙾 𝙰𝙲𝙲𝙴𝚂𝚂 𝙵𝙸𝙻𝙴𝚂...//</b>
+ʙʏ ᴜsɪɴɢ ᴛʜɪs ᴍᴏᴅᴜʟᴇ ʏᴏᴜ ᴄᴀɴ sᴛᴏʀᴇ ғɪʟᴇs ɪɴ ᴍʏ ᴅᴀᴛᴀʙᴀsᴇ ᴀɴᴅ ɪ ᴡɪʟʟ ɢɪᴠᴇ ʏᴏᴜ ᴀ ᴘᴇʀᴍᴇɴᴀɴᴛ ʟɪɴᴋ ᴛᴏ ᴀᴄᴄᴇs ᴛʜᴇ sᴀᴠᴇᴅ ғɪʟᴇs
 
 ✯ ᴄᴏᴍᴍᴀɴᴅs ᴀɴᴅ ᴜsᴀɢᴇ
 
@@ -28,7 +28,7 @@ class script(object):
     
     MANUELFILTER_TXT = """ᴍᴀɴᴜᴀʟ ғɪʟᴛᴇʀs</b>
 
-- Filter is the feature were users can set automated replies for a particular keyword and ᗩᒍᗩ᙭  will respond whenever a keyword is found the message
+ғɪʟᴛᴇʀ ɪs ᴛʜᴇ ғᴇᴀᴛᴜʀᴇ ᴡᴇʀᴇ ᴜsᴇʀs ᴄᴀɴ sᴇᴛ ᴀᴜᴛᴏᴍᴀᴛᴇᴅ ʀᴇᴘʟɪᴇs ғᴏʀ ᴀ ᴘᴀʀᴛɪᴄᴜʟᴀʀ ᴋᴇʏᴡᴏʀᴅ  ᴀɴᴅ ᴍᴀsᴛᴇʀ ᴡɪʟʟ ʀᴇsᴘᴏɴᴅ ᴡʜᴇɴᴇᴠᴇʀ ᴀ ᴋᴇʏᴡᴏʀᴅ ɪs ғᴏᴜɴᴅ ᴛʜᴇ ᴍᴇssᴀɢᴇ
 
 <b>ɴᴏᴛᴇ:</b>
 1. ᴛʜɪs ʙᴏᴛ sʜᴏᴜʟᴅ ʜᴀᴠᴇ ᴀᴅᴍɪɴ ᴘʀɪᴠɪʟʟᴀɢᴇ
@@ -41,10 +41,9 @@ class script(object):
 ⪼ /filters - ʟɪsᴛ ᴀʟʟ ᴛʜᴇ ғɪʟᴛᴇʀs ᴏғ ᴀ ᴄʜᴀᴛ
 ⪼ /del - ᴅᴇʟᴇᴛᴇ ᴀ sᴘᴇᴄɪғɪᴄ ғɪʟᴛᴇʀ ɪɴ ᴄʜᴀᴛ
 ⪼ /delall - ᴅᴇᴛᴇᴛᴇ ᴛʜᴇ ᴡʜᴏʟᴇ ғɪʟᴛᴇʀs ɪɴ ᴀ ᴄʜᴀᴛ (ᴄʜᴀᴛ ᴏᴡɴᴇʀ ᴏɴʟʏ)
-
-• <code>/g_filter off</code> use this commoand + on/off in your group to control global filter in your group"""
+⪼ <code>/g_filter off</code> ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ + ᴏɴ/ᴏғғ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴛᴏ ᴄᴏɴᴛʀᴏʟ  ɢʟᴏʙᴀʟ ғɪʟᴛᴇʀ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ"""
    
-    BUTTON_TXT = """Help: <b>Buttons</b>
+    BUTTON_TXT = """ʙᴜᴛᴛᴏɴ</b>
 
 -this bot Supports both url and alert inline buttons.
 
