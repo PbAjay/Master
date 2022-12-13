@@ -412,12 +412,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
         if mkinact:
             await query.message.edit_text(
-                f"Disconnected from **{title}**",
+                f"ᴅɪsᴄᴏɴɴᴇᴄᴛᴇᴅ ғʀᴏᴍ **{title}**",
                 parse_mode=enums.ParseMode.MARKDOWN
             )
         else:
             await query.message.edit_text(
-                f"Some error occurred!!",
+                f"sᴏᴍᴇ ᴇʀʀᴏʀ ᴏᴄᴄᴜʀʀᴇᴅ",
                 parse_mode=enums.ParseMode.MARKDOWN
             )
         return
@@ -431,7 +431,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
         if delcon:
             await query.message.edit_text(
-                "Successfully deleted connection"
+                "sᴜᴄᴄᴇssғᴜʟʟʏ ᴅᴇʟᴇᴛᴇᴅ ᴄᴏɴɴᴇᴄᴛɪᴏɴ"
             )
         else:
             await query.message.edit_text(
