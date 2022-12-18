@@ -1,6 +1,6 @@
 {
-  "name": "starter-express-api",
-  "version": "1.0.0",
+  "name": "Master",
+  "version": "3.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cyclic-software/starter-express-api.git"
+    "url": "git+https://github.com/PbAjay/Master.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/cyclic-software/starter-express-api/issues"
+    "url": "https://github.com/PbAjay/Master/issues"
   },
-  "homepage": "https://github.com/cyclic-software/starter-express-api#readme",
+  "homepage": "https://github.com/PbAjay/Master#readme",
   "dependencies": {
     "express": "^4.17.1"
   }
