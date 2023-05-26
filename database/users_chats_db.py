@@ -137,19 +137,19 @@ class Database2:
      async def get_all_chats(self): 
          return self.grp2.find({}) 
       
-     async def get_2db_size(self): 
-         return (await self.db2.command("dbstats"))['dataSize'] 
- db2 = Database2(DATABASE_URI2, DATABASE_NAME2) 
-  
- class Database1: 
-  
-     def __init__(self, uri, database_name): 
-         self._client = motor.motor_asyncio.AsyncIOMotorClient(uri) 
-         self.db1 = self._client[database_name]  
-         self.col = self.db1.users 
-  
-     async def get_1db_size(self): 
-         return (await self.db1.command("dbstats"))['dataSize'] 
-  
-  
- db1 = Database1(DATABASE_URI, DATABASE_NAME)
+     async def get_2db_size(self):
+        return (await self.db2.command("dbstats"))['dataSize']
+db2 = Database2(DATABASE_URI2, DATABASE_NAME2)
+
+class Database1:
+
+    def __init__(self, uri, database_name):
+        self._client = motor.motor_asyncio.AsyncIOMotorClient(uri)
+        self.db1 = self._client[database_name] 
+        self.col = self.db1.users
+
+    async def get_1db_size(self):
+        return (await self.db1.command("dbstats"))['dataSize']
+
+
+db1 = Database1(DATABASE_URI, DATABASE_NAME)
