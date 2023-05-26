@@ -10,7 +10,7 @@ import re
 import os
 from datetime import datetime
 from typing import List
-from database.users_chats_db import db
+from database.users_chats_db import db2
 from bs4 import BeautifulSoup
 import requests
 
@@ -171,7 +171,7 @@ async def search_gagala(text):
 async def get_settings(group_id):
     settings = temp.SETTINGS.get(group_id)
     if not settings:
-        settings = await db.get_settings(group_id)
+        settings = await db2.get_settings(group_id)
         temp.SETTINGS[group_id] = settings
     return settings
     
@@ -179,7 +179,7 @@ async def save_group_settings(group_id, key, value):
     current = await get_settings(group_id)
     current[key] = value
     temp.SETTINGS[group_id] = current
-    await db.update_settings(group_id, current)
+    await db2.update_settings(group_id, current)
     
 def get_size(size):
     """Get size in readable format"""
