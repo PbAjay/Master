@@ -14,6 +14,7 @@ python-math
 datetime
 wget
 aiofiles
+ffmpeg
 yt_dlp
 youtube-dl
 youtube_search
