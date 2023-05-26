@@ -30,19 +30,19 @@ async def github(_, message):
                 repositories = result["public_repos"]
                 followers = result["followers"]
                 following = result["following"]
-                caption = f"""Info Of {name}
-👨‍💼 ᴜsᴇʀɴᴀᴍᴇ: {username}
-✍️ ʙɪᴏ: {bio}
-🔗 ᴘʀᴏғɪʟᴇ ʟɪɴᴋ: [Here]({url})
-🏢 ᴄᴏᴍᴘᴀɴʏ: {company}
-📒 ᴄʀᴇᴀᴛᴇᴅ ᴏɴ: {created_at}
-⛵️ ʀᴇᴘᴏsɪᴛᴏʀɪᴇs: {repositories}
-🧖 ʙʟᴏɢ: {blog}
-📍 ʟᴏᴄᴀᴛɪᴏɴ: {location}
-➡️ ғᴏʟʟᴏᴡᴇʀs: {followers}
-⬅️ ғᴏʟʟᴏᴡɪɴɢ: {following}
+                caption = f"""<b>Info Of {name}</b>
+<b>👨‍💼 ᴜsᴇʀɴᴀᴍᴇ:</b> <code>{username}</code>
+<b>✍️ ʙɪᴏ:</b> <code>{bio}</code>
+<b>🔗 ᴘʀᴏғɪʟᴇ ʟɪɴᴋ:</b> <code>[Here]({url})</code>
+<b>🏢 ᴄᴏᴍᴘᴀɴʏ:</b> <code>{company}</code>
+<b>📒 ᴄʀᴇᴀᴛᴇᴅ ᴏɴ:</b> <code>{created_at}</code>
+<b>⛵️ ʀᴇᴘᴏsɪᴛᴏʀɪᴇs:</b> <code>{repositories}</code>
+<b>🧖 ʙʟᴏɢ:</b> <code>{blog}</code>
+<b>📍 ʟᴏᴄᴀᴛɪᴏɴ:</b> <code>{location}</code>
+<b>➡️ ғᴏʟʟᴏᴡᴇʀs:</b> <code>{followers}</code>
+<b>⬅️ ғᴏʟʟᴏᴡɪɴɢ:</b> <code>{following}</code>
 
-ᴘᴏᴡᴇʀᴇᴅ ʙʏ: @MasterV3Bot"""
+<b>ᴘᴏᴡᴇʀᴇᴅ ʙʏ: @MasterV3Bot</b>"""
             except Exception as e:
                 print(str(e))
     await message.reply_photo(photo=avatar_url, caption=caption)
