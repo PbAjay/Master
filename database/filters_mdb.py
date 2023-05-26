@@ -6,11 +6,7 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.ERROR)
 
 myclient = pymongo.MongoClient(DATABASE_URI)
-myclient2 = pymongo.MongoClient(DATABASE_URI2)
 mydb = myclient[DATABASE_NAME]
-mydb2 = myclient[DATABASE_NAME2]
-
-
 
 async def add_filter(grp_id, text, reply_text, btn, file, alert):
     mycol = mydb[str(grp_id)]
