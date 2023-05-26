@@ -13,8 +13,9 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
 
-client = AsyncIOMotorClient(DATABASE_URI) 
-client2 = AsyncIOMotorClient(DATABASE_URI2)  db = client[DATABASE_NAME] 
+client = AsyncIOMotorClient(DATABASE_URI)
+client2 = AsyncIOMotorClient(DATABASE_URI2)
+db = client[DATABASE_NAME]
 db2 = client[DATABASE_NAME2]
 instance = Instance.from_db(db or db2)
 
