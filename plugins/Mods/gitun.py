@@ -33,7 +33,7 @@ async def github(_, message):
                 caption = f"""<b>Info Of {name}</b>
 <b>👨‍💼 ᴜsᴇʀɴᴀᴍᴇ:</b> <code>{username}</code>
 <b>✍️ ʙɪᴏ:</b> <code>{bio}</code>
-<b>🔗 ᴘʀᴏғɪʟᴇ ʟɪɴᴋ:</b> <code>[Here]({url})</code>
+<b>🔗 ᴘʀᴏғɪʟᴇ ʟɪɴᴋ:</b> [Here]({url})
 <b>🏢 ᴄᴏᴍᴘᴀɴʏ:</b> <code>{company}</code>
 <b>📒 ᴄʀᴇᴀᴛᴇᴅ ᴏɴ:</b> <code>{created_at}</code>
 <b>⛵️ ʀᴇᴘᴏsɪᴛᴏʀɪᴇs:</b> <code>{repositories}</code>
