@@ -1,7 +1,7 @@
 from pyrogram import Client, filters
 from utils import temp
 from pyrogram.types import Message
-from database.users_chats_db import db
+from database.users_chats_db import db2
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from info import SUPPORT_CHAT
 
@@ -20,7 +20,7 @@ disabled_group=filters.create(disabled_chat)
 
 @Client.on_message(filters.private & banned_user & filters.incoming)
 async def ban_reply(bot, message):
-    ban = await db.get_ban_status(message.from_user.id)
+    ban = await db2.get_ban_status(message.from_user.id)
     await message.reply(f'Sorry Dude, You are Banned to use Me. \nBan Reason: {ban["ban_reason"]}')
 
 @Client.on_message(filters.group & disabled_group & filters.incoming)
@@ -29,7 +29,7 @@ async def grp_bd(bot, message):
         InlineKeyboardButton('Support', url=f'https://t.me/{SUPPORT_CHAT}')
     ]]
     reply_markup=InlineKeyboardMarkup(buttons)
-    vazha = await db.get_chat(message.chat.id)
+    vazha = await db2.get_chat(message.chat.id)
     k = await message.reply(
         text=f"CHAT NOT ALLOWED 🐞\n\nMy admins has restricted me from working here ! If you want to know more about it contact support..\nReason : <code>{vazha['reason']}</code>.",
         reply_markup=reply_markup)
