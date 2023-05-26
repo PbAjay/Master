@@ -13,3 +13,5 @@ aiohttp
 yt_dlp
 python-math
 datetime
+wget
+aiofiles
