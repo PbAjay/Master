@@ -98,9 +98,6 @@ batch - to create link for multiple posts
 link - to create link for one post
 ```
 
-## Credits 
-* [![AᴊᴀʏZ TG 💚](https://img.shields.io/static/v1?label=AᴊᴀʏZ TG&message=💚&color=critical)](https://telegram.dog/AjayZ_TG)
-
 
 ## Thanks to 
  - Base Repo [EvaMaria](https://github.com/EvaMariaTG/EvaMaria)
@@ -109,5 +106,3 @@ link - to create link for one post
  - Thanks To All 
  - Thanks To All 
  - 
-## Contributes 
-* [![MATRIX🇮🇳™](https://img.shields.io/static/v1?label=MATRIX&message=🇮🇳™&color=critical)](https://telegram.dog/TGxMATRIX)
