@@ -35,18 +35,23 @@ async def git(Kashmira, message):
 """
         if qw.get("description"):
             txt += f'<b>ᴅᴇꜱᴄʀɪᴩᴛɪᴏɴ :</b> <code>{qw.get("description")}</code>'
+            
 
         if qw.get("language"):
             txt += f'<b>ʟᴀɴɢᴜᴀɢᴇ :</b> <code>{qw.get("language")}</code>'
+            
 
         if qw.get("size"):
             txt += f'<b>ꜱɪᴢᴇ :</b> <code>{qw.get("size")}</code>'
+            
 
         if qw.get("score"):
             txt += f'<b>ꜱᴄᴏʀᴇ :</b> <code>{qw.get("score")}</code>'
+            
 
         if qw.get("created_at"):
             txt += f'<b>ᴄʀᴇᴀᴛᴇᴅ ᴀᴛ:</b> <code>{qw.get("created_at")}</code>'
+            
 
         if qw.get("archived") == True:
             txt += f"<b>This Project is Archived</b>"
