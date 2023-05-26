@@ -15,6 +15,7 @@ datetime
 wget
 aiofiles
 yt_dlp
+youtube-dl
 youtube_search
 youtube_search_python
 youtube-search-python==1.4.6
