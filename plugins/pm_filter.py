@@ -448,6 +448,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('ꜱᴏɴɢ', callback_data='song'),
             InlineKeyboardButton('ʀᴇᴩᴏ', callback_data='repo')
         ], [
+            InlineKeyboardButton('ᴜʀʟ ꜱʜᴏʀᴛ', callback_data='url')
+        ], [
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help2'),
             InlineKeyboardButton('ʜᴏᴍᴇ', callback_data='start')
          ]]
@@ -590,6 +592,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.REPO_TXT,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )  
+    elif query.data == "url":
+        buttons = [[
+            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.URL_TXT,
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )  
