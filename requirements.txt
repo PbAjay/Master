@@ -9,10 +9,12 @@ bs4==0.0.1
 imdbpy==2021.4.18
 openai
 telegraph==2.2.0
-aiohttp
-yt_dlp
+aiohttp 
 python-math
 datetime
 wget
 aiofiles
+yt_dlp
 youtube_search
+youtube_search_python
+youtube-search-python==1.4.6
