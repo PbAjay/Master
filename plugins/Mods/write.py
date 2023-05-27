@@ -6,8 +6,8 @@ import requests
 @Client.on_message(filters.command("write"))
 async def handwriting(client, message):
     if len(message.command) < 2:
-        return await message.reply_text("» Give some text to write...")
-    m = await message.reply_text("» I writing please wait...")
+        return await message.reply_text("ɢɪᴠᴇ ꜱᴏᴍᴇ ᴛᴇxᴛ ᴛᴏ ᴡʀɪᴛᴇ...")
+    m = await message.reply_text("ᴩʟᴇᴀꜱᴇ ᴡᴀɪᴛ ᴀᴍ  ᴡʀɪᴛᴇɪɴɢ...")
     name = (
         message.text.split(None, 1)[1]
         if len(message.command) < 3
@@ -17,6 +17,6 @@ async def handwriting(client, message):
     url = requests.get(API).url
     await m.edit("» Uploading...")
     me = await client.get_me()
-    await message.reply_photo(url, caption=f"""**~ Request by {message.from_user.mention}**\n
-**~ Made by @lallu_tgs**""",
-    reply_markup=InlineKeyboardMarkup([[ InlineKeyboardButton(text="Download Link", url=url)]]))
+    await message.reply_photo(url, caption=f"""**ʀᴇǫᴜᴇꜱᴛᴇᴅ ʙʏ {message.from_user.mention}**\n
+""",
+    reply_markup=InlineKeyboardMarkup([[ InlineKeyboardButton(text="ᴅᴏᴡɴʟᴏᴀᴅ", url=url)]]))
