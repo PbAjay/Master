@@ -21,7 +21,7 @@ async def ask_ai(client, m, message):
         # Generate response using OpenAI API
         response = await ai(question)
         # Send response back to user
-        await m.edit(f"ʀᴇᴩʟʏ ꜰᴏʀ ʏᴏᴜʀ ǫᴜᴇʀʏ \n<code>{response}</code>")
+        await m.edit(f"ʀᴇᴩʟʏ ꜰᴏʀ ʏᴏᴜʀ ǫᴜᴇʀʏ \n\n<code>{response}</code>")
     except Exception as e:
         # Handle other errors
         error_message = f"ᴀɴ ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ: {e}"
