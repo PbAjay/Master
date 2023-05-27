@@ -617,38 +617,59 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "stats":
         buttons = [[
-            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help2'),
-            InlineKeyboardButton('ʀᴇꜰʀᴇꜱʜ', callback_data='rfrsh')
+            InlineKeyboardButton('«ʙᴀᴄᴋ', callback_data='help'),
+            InlineKeyboardButton('↺ ʀᴇꜰʀᴇꜱʜ ↺', callback_data='rfrsh')
         ]]
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+        await query.message.edit_text("⦿ ◌ ◌")
+        await query.message.edit_text("⦿ ⦿ ◌")
+        await query.message.edit_text("⦿ ⦿ ⦿")
         reply_markup = InlineKeyboardMarkup(buttons)
-        total = await Media.count_documents()
-        users = await db.total_users_count()
-        chats = await db.total_chat_count()
-        monsize = await db.get_db_size()
-        free = 536870912 - monsize
-        monsize = get_size(monsize)
+        total_users2 = await db2.total_users_count()
+        totl_chats2 = await db2.total_chat_count()
+        files = await Media.count_documents()
+        size = await db1.get_1db_size()
+        size2 = await db2.get_2db_size()
+        free = 536870912 - size
+        free2 = 536870912 - size2
+        size = get_size(size)
+        size2 = get_size(size2)
         free = get_size(free)
+        free2 = get_size(free2)
         await query.message.edit_text(
-            text=script.STATUS_TXT.format(total, users, chats, monsize, free),
+            text=script.STATUS_TXT.format(files, total_users2, totl_chats2, size, free, size2, free2),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "rfrsh":
-        await query.answer("Fetching MongoDb DataBase")
+        await query.answer("𝙁𝙚𝙩𝙘𝙝𝙞𝙣𝙜 𝙈𝙤𝙣𝙜𝙤𝘿𝙗 𝘿𝙖𝙩𝙖𝘽𝙖𝙨𝙚")
         buttons = [[
-            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help2'),
-            InlineKeyboardButton('♻️', callback_data='rfrsh')
+            InlineKeyboardButton('«ʙᴀᴄᴋ', callback_data='help'),
+            InlineKeyboardButton('↺ ʀᴇꜰʀᴇꜱʜ ↺', callback_data='rfrsh')
         ]]
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
         reply_markup = InlineKeyboardMarkup(buttons)
-        total = await Media.count_documents()
-        users = await db.total_users_count()
-        chats = await db.total_chat_count()
-        monsize = await db.get_db_size()
-        free = 536870912 - monsize
-        monsize = get_size(monsize)
+        total_users2 = await db2.total_users_count()
+        totl_chats2 = await db2.total_chat_count()
+        files = await Media.count_documents()
+        size = await db1.get_1db_size()
+        size2 = await db2.get_2db_size()
+        free = 536870912 - size
+        free2 = 536870912 - size2
+        size = get_size(size)
+        size2 = get_size(size2)
         free = get_size(free)
+        free2 = get_size(free2)
         await query.message.edit_text(
-            text=script.STATUS_TXT.format(total, users, chats, monsize, free),
+            text=script.STATUS_TXT.format(files, total_users2, totl_chats2, size, free, size2, free2),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
