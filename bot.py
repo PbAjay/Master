@@ -13,7 +13,7 @@ from database.ia_filterdb import Media
 from database.users_chats_db import db2
 from info import SESSION, API_ID, API_HASH, BOT_TOKEN, LOG_STR, LOG_CHANNEL
 from utils import temp
-from Script import RESTART_TXT
+from Script import script
 from typing import Union, Optional, AsyncGenerator
 from pyrogram import types
 from datetime import date, datetime 
