@@ -21,3 +21,4 @@ youtube_search_python
 youtube-search-python==1.4.6
 ffmpeg
 pyshorteners
+Heroku3
