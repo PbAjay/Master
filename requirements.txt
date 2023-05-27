@@ -21,3 +21,4 @@ youtube_search_python
 youtube-search-python==1.4.6
 ffmpeg
 pyshorteners
+Pillow>=4.2.0
