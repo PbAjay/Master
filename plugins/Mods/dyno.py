@@ -85,11 +85,11 @@ async def bot_status(client,message):
         disk = ""
 
     await message.reply_text(
-        "**ᴄᴜʀʀᴇɴᴛ ꜱᴛᴀᴛɪꜱ ᴏꜰ ʏᴏᴜʀ ʙᴏᴛ**\n\n"
-        "**ᴅʙ ꜱᴛᴀᴛᴜꜱ**\n"
-        f"**ʙᴏᴛ ᴜᴩᴛɪᴍᴇ:** ```{uptime}```\n"
-        f"```{quota_details}```"
-        f"```{disk}```",
+        "ᴄᴜʀʀᴇɴᴛ ꜱᴛᴀᴛɪꜱ ᴏꜰ ʏᴏᴜʀ ʙᴏᴛ\n\n"
+        "ᴅʙ ꜱᴛᴀᴛᴜꜱ\n"
+        f"ʙᴏᴛ ᴜᴩᴛɪᴍᴇ: {uptime}\n"
+        f"{quota_details}"
+        f"{disk}",
         quote=True,
         parse_mode=enums.ParseMode.MARKDOWN
     )
