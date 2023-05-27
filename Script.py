@@ -159,11 +159,7 @@ class script(object):
 • /ping - <code>ᴛᴏ ɢᴇᴛ ᴩɪɴɢ</code>"""
     
     RESTART_TXT = """
-<b>Bᴏᴛ Rᴇsᴛᴀʀᴛᴇᴅ !
-📅 Dᴀᴛᴇ : <code>{}</code>
-⏰Tɪᴍᴇ : <code>{}</code>
-🌐 Tɪᴍᴇᴢᴏɴᴇ : <code>Asia/Kolkata</code></b>
-🛠️ Bᴜɪʟᴅ Sᴛᴀᴛᴜs: <code>[ꜱɪɢᴍᴀ]</code>"""
+f**--ɴᴇᴡ ᴜꜱᴇʀ**\n\nᴜꜱᴇʀ: {u.mention}\nɪᴅ: `{u.id}`\nᴜsᴇʀɴᴀᴍᴇ: @{u.username}\n\nᴅᴀᴛᴇ: {date}\nᴛɪᴍᴇ: {time}\n\nʙʏ: {b.mention}"""
     
     WRITE_TXT = """ <b>ʜᴇʟᴩ: ᴡʀɪᴛᴇ</b>
 ʙʏ ᴜꜱɪɴɢ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ ʏᴏᴜ ᴄᴀɴ ᴡʀɪᴛᴇ ʏᴏᴜʀ ᴀꜱꜱᴀɪɢɴᴍᴇɴᴛ ᴡɪᴛʜᴏᴜᴛᴛ ᴡʀɪᴛᴇɪɴɢ ɪᴛ ᴏɴ ɴᴏᴛᴇ ʙᴏᴏᴋ 
