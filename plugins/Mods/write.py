@@ -15,7 +15,7 @@ async def handwriting(client, message):
     )
     API = "https://apis.xditya.me/write?text=" + name
     url = requests.get(API).url
-    await m.edit("» Uploading...")
+    await m.edit("ᴜᴩʟᴏᴅɪɴɢ...")
     me = await client.get_me()
     await message.reply_photo(url, caption=f"""**ʀᴇǫᴜᴇꜱᴛᴇᴅ ʙʏ {message.from_user.mention}**\n
 """,
