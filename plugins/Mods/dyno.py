@@ -58,10 +58,10 @@ async def bot_status(client,message):
                 quota_details = f"""
 ʜᴇʀᴏᴋᴜ ꜱᴛᴀᴛᴜꜱ
 
-<code>{total}</code> <b>ᴛᴏᴛᴀʟ ᴅʏɴᴏ ʜᴏᴜʀꜱ ʏᴏᴜ ʜᴀᴠᴇ</b>
-<code>{used}</code> <b>ʜᴏᴜʀꜱ</b> <code>( {usedperc}% )</code> <b>ᴜꜱᴇᴅ ᴛʜɪꜱ ᴍᴏɴᴛʜ </b>
-<code>{hours}</code> <b>ʜᴏᴜʀꜱ</b> <code>( {leftperc}% )</code> <b>ʀᴇᴍᴀɴɪɴɢ ᴛʜɪꜱ ᴍᴏɴᴛʜ</b>
-<code>{days}</code> <b>ᴀᴩᴩʀᴏxɪᴍᴀᴛᴇ ᴅᴀʏꜱ</b>  """
+```{total}``` **ᴛᴏᴛᴀʟ ᴅʏɴᴏ ʜᴏᴜʀꜱ ʏᴏᴜ ʜᴀᴠᴇ**
+```{used}``` **ʜᴏᴜʀꜱ** ```( {usedperc}% )``` **ᴜꜱᴇᴅ ᴛʜɪꜱ ᴍᴏɴᴛʜ**
+```{hours}``` **ʜᴏᴜʀꜱ** ```( {leftperc}% )``` **ʀᴇᴍᴀɴɪɴɢ ᴛʜɪꜱ ᴍᴏɴᴛʜ**
+```{days}``` **ᴀᴩᴩʀᴏxɪᴍᴀᴛᴇ ᴅᴀʏꜱ** """
             else:
                 quota_details = ""
         except:
@@ -79,17 +79,17 @@ async def bot_status(client,message):
         free = humanbytes(f)
 
         disk = "\n**ᴅɪꜱᴋ ᴅᴇᴛᴀɪʟꜱ**\n\n" \
-            f"> ᴜꜱᴇᴅ  :  {used} / {total}\n" \
-            f"> ꜰʀᴇᴇ  :  {free}\n\n"
+            f">** ᴜꜱᴇᴅ ** : ``` {used} / {total}```\n" \
+            f">** ꜰʀᴇᴇ ** : ``` {free}```\n\n"
     except:
         disk = ""
 
     await message.reply_text(
-        "ᴄᴜʀʀᴇɴᴛ ꜱᴛᴀᴛɪꜱ ᴏꜰ ʏᴏᴜʀ ʙᴏᴛ\n\n"
-        "ᴅʙ ꜱᴛᴀᴛᴜꜱ\n"
-        f"ʙᴏᴛ ᴜᴩᴛɪᴍᴇ: {uptime}\n"
-        f"{quota_details}"
-        f"{disk}",
+        "**ᴄᴜʀʀᴇɴᴛ ꜱᴛᴀᴛɪꜱ ᴏꜰ ʏᴏᴜʀ ʙᴏᴛ**\n\n"
+        "**ᴅʙ ꜱᴛᴀᴛᴜꜱ**\n"
+        f"**ʙᴏᴛ ᴜᴩᴛɪᴍᴇ:** ```{uptime}```\n"
+        f"```{quota_details}```"
+        f"```{disk}```",
         quote=True,
         parse_mode=enums.ParseMode.MARKDOWN
     )
