@@ -2,7 +2,7 @@ from pyrogram import Client, filters, enums
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.errors.exceptions.bad_request_400 import MessageTooLong, PeerIdInvalid
 from info import ADMINS, LOG_CHANNEL, SUPPORT_CHAT, MELCOW_NEW_USERS
-from database.users_chats_db import db
+from database.users_chats_db import db2, db
 from database.ia_filterdb import Media
 from utils import get_size, temp, get_settings
 from Script import script
@@ -18,7 +18,7 @@ async def save_group(bot, message):
             total=await bot.get_chat_members_count(message.chat.id)
             r_j = message.from_user.mention if message.from_user else "Anonymous" 
             await bot.send_message(LOG_CHANNEL, script.LOG_TEXT_G.format(message.chat.title, message.chat.id, total, r_j))       
-            await db.add_chat(message.chat.id, message.chat.title)
+            await db2.add_chat(message.chat.id, message.chat.title)
         if message.chat.id in temp.BANNED_CHATS:
             # Inspired from a boat of a banana tree
             buttons = [[
@@ -96,12 +96,12 @@ async def disable_chat(bot, message):
         chat_ = int(chat)
     except:
         return await message.reply('Give Me A Valid Chat ID')
-    cha_t = await db.get_chat(int(chat_))
+    cha_t = await db2.get_chat(int(chat_))
     if not cha_t:
         return await message.reply("Chat Not Found In DB")
     if cha_t['is_disabled']:
         return await message.reply(f"This chat is already disabled:\nReason-<code> {cha_t['reason']} </code>")
-    await db.disable_chat(int(chat_), reason)
+    await db2.disable_chat(int(chat_), reason)
     temp.BANNED_CHATS.append(int(chat_))
     await message.reply('Chat Successfully Disabled')
     try:
@@ -127,12 +127,12 @@ async def re_enable_chat(bot, message):
         chat_ = int(chat)
     except:
         return await message.reply('Give Me A Valid Chat ID')
-    sts = await db.get_chat(int(chat))
+    sts = await db2.get_chat(int(chat))
     if not sts:
         return await message.reply("Chat Not Found In DB !")
     if not sts.get('is_disabled'):
         return await message.reply('This chat is not yet disabled.')
-    await db.re_enable_chat(int(chat_))
+    await db2.re_enable_chat(int(chat_))
     temp.BANNED_CHATS.remove(int(chat_))
     await message.reply("Chat Successfully re-enabled")
 
@@ -140,14 +140,18 @@ async def re_enable_chat(bot, message):
 @Client.on_message(filters.command('stats') & filters.incoming)
 async def get_ststs(bot, message):
     rju = await message.reply('Fetching stats..')
-    total_users = await db.total_users_count()
-    totl_chats = await db.total_chat_count()
+    total_users2 = await db2.total_users_count()
+    totl_chats2 = await db2.total_chat_count()
     files = await Media.count_documents()
     size = await db.get_db_size()
+    size2 = await db2.get_2db_size()
     free = 536870912 - size
+    free2 = 536870912 - size2
     size = get_size(size)
+    size2 = get_size(size2)
     free = get_size(free)
-    await rju.edit(script.STATUS_TXT.format(files, total_users, totl_chats, size, free))
+    free2 = get_size(free2)
+    await rju.edit(script.STATUS_TXT.format(files, total_users2, totl_chats2, size, free, size2, free2))
 
 
 # a function for trespassing into others groups, Inspired by a Vazha
@@ -194,7 +198,7 @@ async def ban_a_user(bot, message):
     except Exception as e:
         return await message.reply(f'Error - {e}')
     else:
-        jar = await db.get_ban_status(k.id)
+        jar = await db2.get_ban_status(k.id)
         if jar['is_banned']:
             return await message.reply(f"{k.mention} is already banned\nReason: {jar['ban_reason']}")
         await db.ban_user(k.id, reason)
@@ -227,7 +231,7 @@ async def unban_a_user(bot, message):
     except Exception as e:
         return await message.reply(f'Error - {e}')
     else:
-        jar = await db.get_ban_status(k.id)
+        jar = await db2.get_ban_status(k.id)
         if not jar['is_banned']:
             return await message.reply(f"{k.mention} is not yet banned.")
         await db.remove_ban(k.id)
@@ -240,7 +244,7 @@ async def unban_a_user(bot, message):
 async def list_users(bot, message):
     # https://t.me/GetTGLink/4184
     raju = await message.reply('Getting List Of Users')
-    users = await db.get_all_users()
+    users = await db2.get_all_users()
     out = "Users Saved In DB Are:\n\n"
     async for user in users:
         out += f"<a href=tg://user?id={user['id']}>{user['name']}</a>"
@@ -257,7 +261,7 @@ async def list_users(bot, message):
 @Client.on_message(filters.command('chats') & filters.user(ADMINS))
 async def list_chats(bot, message):
     raju = await message.reply('Getting List Of chats')
-    chats = await db.get_all_chats()
+    chats = await db2.get_all_chats()
     out = "Chats Saved In DB Are:\n\n"
     async for chat in chats:
         out += f"**Title:** `{chat['title']}`\n**- ID:** `{chat['id']}`"
