@@ -58,10 +58,10 @@ async def bot_status(client,message):
                 quota_details = f"""
 ʜᴇʀᴏᴋᴜ ꜱᴛᴀᴛᴜꜱ
 
-{total} **ᴛᴏᴛᴀʟ ᴅʏɴᴏ ʜᴏᴜʀꜱ ʏᴏᴜ ʜᴀᴠᴇ**
-{used} **ʜᴏᴜʀꜱ** ( {usedperc}% ) **ᴜꜱᴇᴅ ᴛʜɪꜱ ᴍᴏɴᴛʜ**
-{hours} **ʜᴏᴜʀꜱ** ( {leftperc}% ) **ʀᴇᴍᴀɴɪɴɢ ᴛʜɪꜱ ᴍᴏɴᴛʜ**
-{days} **ᴀᴩᴩʀᴏxɪᴍᴀᴛᴇ ᴅᴀʏꜱ** """
+{total} ᴛᴏᴛᴀʟ ᴅʏɴᴏ ʜᴏᴜʀꜱ ʏᴏᴜ ʜᴀᴠᴇ
+{used} ʜᴏᴜʀꜱ ( {usedperc}% ) ᴜꜱᴇᴅ ᴛʜɪꜱ ᴍᴏɴᴛʜ
+{hours} ʜᴏᴜʀꜱ ( {leftperc}% ) ʀᴇᴍᴀɴɪɴɢ ᴛʜɪꜱ ᴍᴏɴᴛʜ
+{days} ᴀᴩᴩʀᴏxɪᴍᴀᴛᴇ ᴅᴀʏꜱ """
             else:
                 quota_details = ""
         except:
