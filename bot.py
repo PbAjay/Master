@@ -47,9 +47,9 @@ class Bot(Client):
         tz = pytz.timezone('Asia/Kolkata')
         today = date.today()
         now = datetime.now(tz)
-        time = now.strftime("%I:%M:%S %p")
+        time = now.strftime("%H:%M:%S %p")
         start_time = datetime.now()
-        await self.send_message(chat_id=LOG_CHANNEL, text=script.RESTART_TXT.format(today, start_time))
+        await self.send_message(chat_id=LOG_CHANNEL, text=script.RESTART_TXT.format(today, time))
 
 
     async def stop(self, *args):
