@@ -620,9 +620,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('«ʙᴀᴄᴋ', callback_data='help'),
             InlineKeyboardButton('↺ ʀᴇꜰʀᴇꜱʜ ↺', callback_data='rfrsh')
         ]]
-        await query.message.edit_text("⦿ ◌ ◌")
-        await query.message.edit_text("⦿ ⦿ ◌")
-        await query.message.edit_text("⦿ ⦿ ⦿")
         reply_markup = InlineKeyboardMarkup(buttons)
         total_users2 = await db2.total_users_count()
         totl_chats2 = await db2.total_chat_count()
