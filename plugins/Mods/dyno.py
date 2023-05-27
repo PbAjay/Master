@@ -1,4 +1,5 @@
-#Made By @Don_Sflix
+#Made By @AjayZ_TG
+#Use With Proper Credits
 
 import os
 import math
@@ -57,10 +58,10 @@ async def bot_status(client,message):
                 quota_details = f"""
 ʜᴇʀᴏᴋᴜ ꜱᴛᴀᴛᴜꜱ
 
-{total} ᴛᴏᴛᴀʟ ᴅʏɴᴏ ʜᴏᴜʀꜱ ʏᴏᴜ ʜᴀᴠᴇ 
-{used} ʜᴏᴜʀꜱ ( {usedperc}%  ᴜꜱᴇᴅ ᴛʜɪꜱ ᴍᴏɴᴛʜ 
-{hours} ʜᴏᴜʀꜱ ( {leftperc}% ) ʀᴇᴍᴀɴɪɴɢ ᴛʜɪꜱ ᴍᴏɴᴛ
-{days} ᴀᴩᴩʀᴏxɪᴍᴀᴛᴇ ᴅᴀʏꜱ  """
+<code>{total}</code> <b>ᴛᴏᴛᴀʟ ᴅʏɴᴏ ʜᴏᴜʀꜱ ʏᴏᴜ ʜᴀᴠᴇ</b>
+<code>{used}</code> <b>ʜᴏᴜʀꜱ</b> <code>( {usedperc}% )</code> <b>ᴜꜱᴇᴅ ᴛʜɪꜱ ᴍᴏɴᴛʜ </b>
+<code>{hours}</code> <b>ʜᴏᴜʀꜱ</b> <code>( {leftperc}% )</code> <b>ʀᴇᴍᴀɴɪɴɢ ᴛʜɪꜱ ᴍᴏɴᴛʜ</b>
+<code>{days}</code> <b>ᴀᴩᴩʀᴏxɪᴍᴀᴛᴇ ᴅᴀʏꜱ</b>  """
             else:
                 quota_details = ""
         except:
@@ -77,16 +78,16 @@ async def bot_status(client,message):
         used = humanbytes(u)
         free = humanbytes(f)
 
-        disk = "\n**Disk Details**\n\n" \
-            f"> USED  :  {used} / {total}\n" \
-            f"> FREE  :  {free}\n\n"
+        disk = "\n**ᴅɪꜱᴋ ᴅᴇᴛᴀɪʟꜱ**\n\n" \
+            f"> ᴜꜱᴇᴅ  :  {used} / {total}\n" \
+            f"> ꜰʀᴇᴇ  :  {free}\n\n"
     except:
         disk = ""
 
     await message.reply_text(
-        "𝗖𝘂𝗿𝗿𝗲𝗻𝘁 𝘀𝘁𝗮𝘁𝘂𝘀 𝗼𝗳 𝘆𝗼𝘂𝗿 𝗕𝗼𝘁\n\n"
-        "DB Status\n"
-        f"➪ 𝖡𝗈𝗍 𝖴𝗉𝗍𝗂𝗆𝖾: {uptime}\n"
+        "ᴄᴜʀʀᴇɴᴛ ꜱᴛᴀᴛɪꜱ ᴏꜰ ʏᴏᴜʀ ʙᴏᴛ\n\n"
+        "ᴅʙ ꜱᴛᴀᴛᴜꜱ\n"
+        f"ʙᴏᴛ ᴜᴩᴛɪᴍᴇ: {uptime}\n"
         f"{quota_details}"
         f"{disk}",
         quote=True,
