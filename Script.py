@@ -191,7 +191,7 @@ class script(object):
       
     FETCHING_INFO = """<b>ᴩʟᴇᴀꜱᴇ ᴡᴀɪᴛ...</b>"""
 
-    JSON_TXT ="""<b>ʜᴇʟᴩ: ᴊꜱᴏʙ</b>
+    JSON_TXT ="""<b>ʜᴇʟᴩ: ᴊꜱᴏɴ</b>
 ʙᴏᴛ ʀᴇᴛᴜʀɴs ɪsᴏɴ ғᴏʀ ᴀʟʟ ʀᴇᴘʟɪᴇᴅ ᴍᴇssᴀɢᴇs ᴡɪᴛʜ /json
 
 <b>ꜰᴇᴀᴛᴜʀᴇꜱ:</b>
