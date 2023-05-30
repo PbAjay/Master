@@ -19,6 +19,8 @@ youtube-dl
 youtube_search
 youtube_search_python
 youtube-search-python==1.4.6
+
+git+https://github.com/cinemagoer/cinemagoer
 ffmpeg
 pyshorteners
 Heroku3
