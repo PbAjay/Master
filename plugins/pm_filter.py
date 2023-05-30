@@ -456,6 +456,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('ᴊꜱoɴ', callback_data='json'),
             InlineKeyboardButton('ᴄᴀʀʙᴏɴ', callback_data='carb'),
         ], [
+            InlineKeyboardButton('ꜱʜᴀʀᴇ ᴛᴇxᴛ', callback_data='sharetxt'), 
+            InlineKeyboardButton('ꜰɪʟᴇ ꜱᴛᴏʀᴇ', callback_data='newdata')
+        ], [
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help2'),
             InlineKeyboardButton('ʜᴏᴍᴇ', callback_data='start')
          ]]
@@ -658,6 +661,26 @@ async def cb_handler(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.CARBON_TXT,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )  
+    elif query.data == "newdata":
+        buttons = [[
+            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.NEWDATA_TXT,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )  
+    elif query.data == "sharetxt":
+        buttons = [[
+            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.SHARE_TXT,
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )  
