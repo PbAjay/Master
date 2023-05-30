@@ -453,7 +453,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('ᴡʀɪᴛᴇ', callback_data='write')
         ], [
             InlineKeyboardButton('ꜱᴛɪᴄᴋᴇʀ ɪᴅ', callback_data='sticker'),
-            InlineKeyboardButton('ᴊꜱᴏɴᴇ', callback_data='jsone')
+            InlineKeyboardButton('ᴊꜱoɴ', callback_data='json')
         ], [
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help2'),
             InlineKeyboardButton('ʜᴏᴍᴇ', callback_data='start')
@@ -646,7 +646,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
-            text=script.JSONE_TXT,
+            text=script.JSON_TXT,
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )  
