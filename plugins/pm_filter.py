@@ -692,7 +692,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.message.edit_text(
             text=script.ADMIN_TXT,
             reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
+            parse_mode=enums.ParseMode.HTML, reply_markup=reply_markup)
+    else:
+        await query.answer("ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴍʏ ᴀᴅᴍɪɴ", show_alert=True 
         )
     elif query.data == "stats":
         buttons = [[
