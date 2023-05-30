@@ -20,7 +20,7 @@ youtube_search
 youtube_search_python
 youtube-search-python==1.4.6
 
-git+https://github.com/cinemagoer/cinemagoer
+git+https://github.com/Joelkb/cinemagoer
 ffmpeg
 pyshorteners
 Heroku3
