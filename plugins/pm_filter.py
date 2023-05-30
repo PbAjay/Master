@@ -453,7 +453,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('ᴡʀɪᴛᴇ', callback_data='write')
         ], [
             InlineKeyboardButton('ꜱᴛɪᴄᴋᴇʀ ɪᴅ', callback_data='sticker'),
-            InlineKeyboardButton('ᴊꜱoɴ', callback_data='json')
+            InlineKeyboardButton('ᴊꜱoɴ', callback_data='json'),
+            InlineKeyboardButton('ᴄᴀʀʙᴏɴ', callback_data='carb'),
         ], [
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help2'),
             InlineKeyboardButton('ʜᴏᴍᴇ', callback_data='start')
@@ -647,6 +648,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.JSON_TXT,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )  
+    elif query.data == "carb":
+        buttons = [[
+            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.CARBON_TXT,
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )  
