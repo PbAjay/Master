@@ -1,6 +1,6 @@
 from pyrogram import Client, filters
-from plugins.helper.admin_check import admin_check
-from plugins.helper.extract import extract_time, extract_user                               
+from plugins.functions.admin_check import admin_check
+from plugins.functions.extract import extract_time, extract_user                               
 
 
 @Client.on_message(filters.command("ban"))
