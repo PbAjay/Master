@@ -640,7 +640,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )  
-    elif query.data == "jsone":
+    elif query.data == "json":
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
         ]]
