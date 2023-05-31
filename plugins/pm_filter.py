@@ -507,7 +507,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ], [
             InlineKeyboardButton('ꜱʜᴀʀᴇ ᴛᴇxᴛ', callback_data='sharetxt'), 
             InlineKeyboardButton('ʟʏʀɪᴄꜱ', callback_data='lyrics '),
-            InlineKeyboardButton('ꜰɪʟᴇ ꜱᴛᴏʀᴇ', callback_data='newdata'),
+            InlineKeyboardButton('ꜰɪʟᴇ ꜱᴛᴏʀᴇ', callback_data='newdata')
         ], [
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help2'),
             InlineKeyboardButton('ɴᴇxᴛ', callback_data='help3')
@@ -517,7 +517,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InputMediaPhoto(random.choice(PICS), script.HELP_TXT.format(query.from_user.mention), enums.ParseMode.HTML),
             reply_markup=reply_markup,           
         )
-        
+    elif query.data == "help3":
+        buttons = [[
+           InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
+         ]]
+        reply_markup = InlineKeyboardMarkup(buttons)             
+        await query.edit_message_media(  
+            InputMediaPhoto(random.choice(PICS), script.HELP_TXT.format(query.from_user.mention), enums.ParseMode.HTML),
+            reply_markup=reply_markup,           
+        )
     elif query.data == "about":
         buttons = [[
             InlineKeyboardButton('ᴏᴡɴᴇʀ', url='https://t.me/AjayZ_TG'),
