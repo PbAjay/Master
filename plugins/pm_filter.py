@@ -461,6 +461,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InputMediaPhoto(random.choice(PICS), START_TXT.format(user=query.from_user.mention, bot=temp.B_LINK), enums.ParseMode.HTML),
             reply_markup=reply_markup,
         )
+        
         await query.answer('Piracy Is Crime')
     elif query.data == "help2":
         buttons = [[
@@ -480,6 +481,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InputMediaPhoto(random.choice(PICS), script.HELP_TXT.format(query.from_user.mention), enums.ParseMode.HTML),
             reply_markup=reply_markup,           
         )
+        
     elif query.data == "help":
         buttons = [[                               
             InlineKeyboardButton('ᴏᴩᴇɴ ᴀɪ', callback_data='ai'),
@@ -509,6 +511,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InputMediaPhoto(random.choice(PICS), script.HELP_TXT.format(query.from_user.mention), enums.ParseMode.HTML),
             reply_markup=reply_markup,           
         )
+        
     elif query.data == "about":
         buttons = [[
             InlineKeyboardButton('ᴏᴡɴᴇʀ', url='https://t.me/AjayZ_TG'),
@@ -522,6 +525,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InputMediaPhoto(random.choice(PICS), script.ABOUT_TXT.format(temp.B_NAME), enums.ParseMode.HTML),
             reply_markup=reply_markup,           
         )
+        
     elif query.data == "ai":
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
@@ -531,6 +535,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InputMediaPhoto(random.choice(PICS), script.AI_TXT, enums.ParseMode.HTML),
             reply_markup=reply_markup,            
         )
+        
     elif query.data == "source":
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='about')
@@ -540,6 +545,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InputMediaPhoto(random.choice(PICS), script.SOURCE_TXT, enums.ParseMode.HTML),
             reply_markup=reply_markup,            
         )
+        
     elif query.data == "manuelfilter":
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help2'),
@@ -550,6 +556,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InputMediaPhoto(random.choice(PICS), script.MANUELFILTER_TXT, enums.ParseMode.HTML),
             reply_markup=reply_markup,            
         )
+        
     elif query.data == "button":
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='manuelfilter')
@@ -559,6 +566,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InputMediaPhoto(random.choice(PICS), script.BUTTON_TXT, enums.ParseMode.HTML),
             reply_markup=reply_markup,
         )
+        
     elif query.data == "autofilter":
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help2')
@@ -568,6 +576,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InputMediaPhoto(random.choice(PICS), script.AUTOFILTER_TXT, enums.ParseMode.HTML),
             reply_markup=reply_markup,            
         )
+        
     elif query.data == "coct":
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help2')
@@ -577,6 +586,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InputMediaPhoto(random.choice(PICS), script.CONNECTION_TXT, enums.ParseMode.HTML),
             reply_markup=reply_markup,            
         )
+        
     elif query.data == "extra":
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help2'),
@@ -587,6 +597,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InputMediaPhoto(random.choice(PICS), script.EXTRAMOD_TXT, enums.ParseMode.HTML),
             reply_markup=reply_markup,            
         )
+        
     elif query.data == "tele":
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
@@ -596,6 +607,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InputMediaPhoto(random.choice(PICS), script.TELE_TXT, enums.ParseMode.HTML),
             reply_markup=reply_markup,            
         )
+        
     elif query.data == "font":
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
@@ -605,6 +617,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InputMediaPhoto(random.choice(PICS), script.FONT_TXT, enums.ParseMode.HTML),
             reply_markup=reply_markup,            
         )
+        
     elif query.data == "github":
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
@@ -614,6 +627,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InputMediaPhoto(random.choice(PICS), script.GITHUB_TXT, enums.ParseMode.HTML),
             reply_markup=reply_markup,            
         )
+        
     elif query.data == "song":
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
@@ -623,6 +637,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InputMediaPhoto(random.choice(PICS), script.SONG_TXT, enums.ParseMode.HTML),
             reply_markup=reply_markup,            
         )
+        
     elif query.data == "repo":
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
@@ -632,6 +647,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InputMediaPhoto(random.choice(PICS), script.REPO_TXT, enums.ParseMode.HTML),
             reply_markup=reply_markup,            
         )
+        
     elif query.data == "url":
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
@@ -641,6 +657,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InputMediaPhoto(random.choice(PICS), script.URL_TXT, enums.ParseMode.HTML),
             reply_markup=reply_markup,            
         )
+        
     elif query.data == "ping":
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
@@ -650,6 +667,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InputMediaPhoto(random.choice(PICS), script.PING_TXT, enums.ParseMode.HTML),
             reply_markup=reply_markup,            
         )
+        
     elif query.data == "write":
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
@@ -659,6 +677,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InputMediaPhoto(random.choice(PICS), script.WRITE_TXT, enums.ParseMode.HTML),
             reply_markup=reply_markup,            
         )
+        
     elif query.data == "sticker":
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
@@ -668,6 +687,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InputMediaPhoto(random.choice(PICS), script.STICKER_TXT, enums.ParseMode.HTML),
             reply_markup=reply_markup,            
         )
+        
     elif query.data == "json":
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
@@ -677,6 +697,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InputMediaPhoto(random.choice(PICS), script.JSON_TXT, enums.ParseMode.HTML),
             reply_markup=reply_markup,            
         )
+        
     elif query.data == "carb":
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
@@ -686,6 +707,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InputMediaPhoto(random.choice(PICS), script.CARBON_TXT, enums.ParseMode.HTML),
             reply_markup=reply_markup,            
         )
+        
     elif query.data == "newdata":
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
@@ -695,6 +717,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InputMediaPhoto(random.choice(PICS), script.NEWDATA_TXT, enums.ParseMode.HTML),
             reply_markup=reply_markup,            
         )
+        
     elif query.data == "sharetxt":
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
@@ -704,15 +727,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InputMediaPhoto(random.choice(PICS), script.SHARE_TXT, enums.ParseMode.HTML),
             reply_markup=reply_markup,            
         )
+        
     elif query.data == "admin":
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='extra')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await query.edit_message_media(
-            InputMediaPhoto(random.choice(PICS), script.ADMIN_TXT, enums.ParseMode.HTML),
-            reply_markup=reply_markup,            
-        )
+        if query.from_user.id in ADMINS:
+            await query.edit_message_media(InputMediaPhoto(random.choice(PICS), script.ADMIN_TXT, enums.ParseMode.HTML), reply_markup=reply_markup)
+        else:
+            await query.answer("Your Not Authorizer ⚠️", show_alert=True)
+
     elif query.data == "stats":
         buttons = [[
             InlineKeyboardButton('«ʙᴀᴄᴋ', callback_data='help2'),
