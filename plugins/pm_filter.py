@@ -459,7 +459,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.edit_message_media(
-            InputMediaPhoto(random.choice(PICS), script.START_TXT.format(user=query.from_user.mention, bot=temp.B_LINK), enums.ParseMode.HTML),
+            InputMediaPhoto(random.choice(PICS), script.START_TXT.format(user=query.from_user.mention), enums.ParseMode.HTML),
             reply_markup=reply_markup,
         )
         
