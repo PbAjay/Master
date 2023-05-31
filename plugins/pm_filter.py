@@ -218,18 +218,18 @@ async def advantage_spoll_choker(bot, query):
         ])
 
         await query.message.edit_text(
-            f"Group Name : **{title}**\nGroup ID : `{group_id}`",
+            f"ɢʀᴏᴜᴩ ɴᴀᴍᴇ : **{title}**\n ɢʀᴏᴜᴩ ɪᴅ :- `{group_id}`",
             reply_markup=keyboard,
             parse_mode=enums.ParseMode.MARKDOWN
         )
-        return await query.answer('Piracy Is Crime')
+        return await query.answer('ᴅᴏɴᴇ')
     elif "connectcb" in query.data:
         await query.answer()
 
         group_id = query.data.split(":")[1]
 
         hr = await client.get_chat(int(group_id))
-
+        
         title = hr.title
 
         user_id = query.from_user.id
@@ -238,8 +238,8 @@ async def advantage_spoll_choker(bot, query):
 
         if mkact:
             await query.message.edit_text(
-                f"Connected to **{title}**",
-                parse_mode=enums.ParseMode.MARKDOWN
+                f"ᴄᴏɴɴᴇᴄᴛᴇᴅ ᴛᴏ **{title}**",
+                parse_mode=enums.ParseMode.MARKDOWN,
             )
         else:
             await query.message.edit_text('Some error occurred!!', parse_mode=enums.ParseMode.MARKDOWN)
