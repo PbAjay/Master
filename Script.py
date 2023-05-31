@@ -223,4 +223,4 @@ class script(object):
 • /pbatch - <code>ᴜꜱᴇ ʏᴏᴜʀ ᴍᴇᴅɪᴀ ʟɪɴᴋ ᴡʜɪᴛʜ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ</code>
 • /batch - <code>ᴛᴏ ᴄʀᴇᴀᴛᴇ ʟɪɴᴋ ꜰᴏʀ ᴍᴜʟᴛɪᴩʟᴇ ꜰɪʟᴇꜱ</code>"""
     
-    LYRICS_TXT = """<b>ʜᴇʟᴩ: ʟʏʀɪᴄꜱ</b>
+    LYRICS_TXT = """<b>ʜᴇʟᴩ: ʟʏʀɪᴄꜱ</b>"""
