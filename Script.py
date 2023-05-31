@@ -94,10 +94,10 @@ class script(object):
     STATUS_TXT = """★ ᴛᴏᴛᴀʟ ꜰɪʟᴇꜱ: <code>{}</code>
 ★ ᴛᴏᴛᴀʟ ᴜꜱᴇʀꜱ: <code>{}</code>
 ★ ᴛᴏᴛᴀʟ ᴄʜᴀᴛꜱ: <code>{}</code>
-★ ᴜꜱᴇᴅ ꜱᴛᴏʀᴀɢᴇ 𝟷: <code>{}</code>
-★ ꜰʀᴇᴇ ꜱᴛᴏʀᴀɢᴇ 𝟷: <code>{}</code>
-★ ᴜꜱᴇᴅ ꜱᴛᴏʀᴀɢᴇ 𝟸: <code>{}</code>
-★ ꜰʀᴇᴇ ꜱᴛᴏʀᴀɢᴇ 𝟸: <code>{}</code>"""
+★ ᴅʙ𝟷 ᴜꜱᴇᴅ: <code>{}</code>
+★ ᴅʙ𝟷 ꜰʀᴇᴇ: <code>{}</code>
+★ ᴅʙ𝟸 ᴜꜱᴇᴅ: <code>{}</code>
+★ ᴅʙ𝟸 ꜰʀᴇᴇ: <code>{}</code>"""
     LOG_TEXT_G = """#ɴᴇᴡɢʀᴏᴜᴩ
 ɢʀᴏᴜᴩ = {}(<code>{}</code>)
 ᴛᴏᴛᴀʟ ᴍᴇᴍʙᴇʀꜱ = <code>{}</code>
