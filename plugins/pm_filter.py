@@ -217,22 +217,21 @@ async def cb_handler(client: Client, query: CallbackQuery):
             [InlineKeyboardButton(f"{stat}", callback_data=f"{cb}:{group_id}"),
              InlineKeyboardButton("DELETE", callback_data=f"deletecb:{group_id}")],
             [InlineKeyboardButton("BACK", callback_data="backcb")]
-        ])
-
+        ]) 
 
         await query.message.edit_text(
-            f"ɢʀᴏᴜᴩ ɴᴀᴍᴇ : **{title}**\n ɢʀᴏᴜᴩ ɪᴅ :- `{group_id}`",
+            f"Group Name : **{title}**\nGroup ID : `{group_id}`",
             reply_markup=keyboard,
             parse_mode=enums.ParseMode.MARKDOWN
         )
-        return await query.answer('ᴅᴏɴᴇ')
+        return await query.answer('Piracy Is Crime')
     elif "connectcb" in query.data:
         await query.answer()
 
         group_id = query.data.split(":")[1]
 
         hr = await client.get_chat(int(group_id))
-        
+
         title = hr.title
 
         user_id = query.from_user.id
@@ -241,12 +240,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
         if mkact:
             await query.message.edit_text(
-                f"ᴄᴏɴɴᴇᴄᴛᴇᴅ ᴛᴏ **{title}**",
-                parse_mode=enums.ParseMode.MARKDOWN,
+                f"Connected to **{title}**",
+                parse_mode=enums.ParseMode.MARKDOWN
             )
         else:
-            await query.message.edit_text('ꜱᴏᴍᴇ ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ !', parse_mode="md")
-        return await query.answer('ᴏᴋᴇʏ')
+            await query.message.edit_text('Some error occurred!!', parse_mode=enums.ParseMode.MARKDOWN)
+        return await query.answer('Piracy Is Crime')
     elif "disconnect" in query.data:
         await query.answer()
 
@@ -261,15 +260,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
         if mkinact:
             await query.message.edit_text(
-                f"ᴅɪꜱᴄᴏɴɴᴇᴄᴛᴇᴅ ꜰʀᴏᴍ **{title}**",
+                f"Disconnected from **{title}**",
                 parse_mode=enums.ParseMode.MARKDOWN
             )
         else:
             await query.message.edit_text(
-                f"ꜱᴏᴍᴇ ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ !",
+                f"Some error occurred!!",
                 parse_mode=enums.ParseMode.MARKDOWN
             )
-        return
+        return await query.answer('Piracy Is Crime')
     elif "deletecb" in query.data:
         await query.answer()
 
@@ -280,14 +279,14 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
         if delcon:
             await query.message.edit_text(
-                "ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ᴅᴇʟᴇᴛᴇᴅ ᴄᴏɴɴᴇᴄᴛɪᴏɴ"
+                "Successfully deleted connection"
             )
         else:
             await query.message.edit_text(
-                f"ꜱᴏᴍᴇ ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ !",
+                f"Some error occurred!!",
                 parse_mode=enums.ParseMode.MARKDOWN
             )
-        return await query.answer('ᴏᴋ')
+        return await query.answer('Piracy Is Crime')
     elif query.data == "backcb":
         await query.answer()
 
@@ -296,7 +295,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         groupids = await all_connections(str(userid))
         if groupids is None:
             await query.message.edit_text(
-                "ᴛʜᴇʀᴇ ᴀʀᴇ ɴᴏ ᴀᴄᴛɪᴠᴇ ᴄᴏɴɴᴇᴄᴛɪᴏɴꜱ ! ᴄᴏɴɴᴇᴄᴛ ᴛᴏ ꜱᴏᴍᴇ ɢʀᴏᴜᴩꜱ ꜰɪʀꜱᴛ",
+                "There are no active connections!! Connect to some groups first.",
             )
             return await query.answer('𝙿𝙻𝙴𝙰𝚂𝙴 𝚂𝙷𝙰𝚁𝙴 𝙰𝙽𝙳 𝚂𝚄𝙿𝙿𝙾𝚁𝚃')
         buttons = []
