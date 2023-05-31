@@ -342,38 +342,40 @@ async def cb_handler(client: Client, query: CallbackQuery):
     if query.data.startswith("pmfile"):
         ident, file_id = query.data.split("#")
         files_ = await get_file_details(file_id)
-        if not files_:
-            return await query.answer('No such file exist.')
-        files = files_[0]
-        title = files.file_name
-        size = get_size(files.file_size)
-        f_caption = files.caption
-        if CUSTOM_FILE_CAPTION:
+return await query.answer('Piracy Is Crime')
+        buttons = []
+        for groupid in groupids:
             try:
-                f_caption = CUSTOM_FILE_CAPTION.format(mention=query.from_user.mention, file_name='' if title is None else title, file_size='' if size is None else size, file_caption='' if f_caption is None else f_caption)                                                                                                      
-            except Exception as e:
-                logger.exception(e)
-            f_caption = f_caption
-        if f_caption is None:
-            f_caption = f"{files.file_name}"    
-        try:                  
-            if AUTH_CHANNEL and not await is_subscribed(client, query):
-                return await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
-            else:
-                await client.send_cached_media(
-                    chat_id=query.from_user.id,
-                    file_id=file_id,
-                    caption=f_caption,
-                    protect_content=True if ident == "pmfilep" else False                    
-                )                       
-        except Exception as e:
-            await query.answer(f"⚠️ Error {e}", show_alert=True)
-        
-    if query.data.startswith("file"):        
-        ident, req, file_id = query.data.split("#")
-        if BUTTON_LOCK.strip().lower() in ["true", "yes", "1", "enable", "y"]:
-            if int(req) not in [query.from_user.id, 0]:
-                return await query.answer(BUTTON_LOCK_TEXT.format(query=query.from_user.first_name), show_alert=True)             
+                ttl = await client.get_chat(int(groupid))
+                title = ttl.title
+                active = await if_active(str(userid), str(groupid))
+                act = " - ACTIVE" if active else ""
+                buttons.append(
+                    [
+                        InlineKeyboardButton(
+                            text=f"{title}{act}", callback_data=f"groupcb:{groupid}:{act}"
+                        )
+                    ]
+                )
+            except:
+                pass
+        if buttons:
+            await query.message.edit_text(
+                "Your connected group details ;\n\n",
+                reply_markup=InlineKeyboardMarkup(buttons)
+            )
+    elif "alertmessage" in query.data:
+        grp_id = query.message.chat.id
+        i = query.data.split(":")[1]
+        keyword = query.data.split(":")[2]
+        reply_text, btn, alerts, fileid = await find_filter(grp_id, keyword)
+        if alerts is not None:
+            alerts = ast.literal_eval(alerts)
+            alert = alerts[int(i)]
+            alert = alert.replace("\\n", "\n").replace("\\t", "\t")
+            await query.answer(alert, show_alert=True)
+    if query.data.startswith("file"):
+        ident, file_id = query.data.split("#")
         files_ = await get_file_details(file_id)
         if not files_:
             return await query.answer('No such file exist.')
@@ -384,12 +386,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
         settings = await get_settings(query.message.chat.id)
         if CUSTOM_FILE_CAPTION:
             try:
-                f_caption = CUSTOM_FILE_CAPTION.format(mention=query.from_user.mention, file_name='' if title is None else title, file_size='' if size is None else size, file_caption='' if f_caption is None else f_caption)                               
+                f_caption = CUSTOM_FILE_CAPTION.format(file_name='' if title is None else title,
+                                                       file_size='' if size is None else size,
+                                                       file_caption='' if f_caption is None else f_caption)
             except Exception as e:
                 logger.exception(e)
             f_caption = f_caption
         if f_caption is None:
-            f_caption = f"{files.file_name}"        
+            f_caption = f"{files.file_name}"
+
         try:
             if AUTH_CHANNEL and not await is_subscribed(client, query):
                 await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
