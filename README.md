@@ -55,6 +55,12 @@ You can deploy this bot anywhere.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/PbAjay/Master)
 
+<details><summary>Deploy To Render</summary>
+<br>
+<a href="https://render.com/deploy?repo=https://github.com/PbAjay/Master/tree/web">
+<img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render">
+</a>
+</details>
 
 <details><summary>Deploy To VPS</summary>
 <p>
