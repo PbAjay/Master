@@ -222,3 +222,5 @@ class script(object):
 • /plink - <code>ʀᴇᴩʟʏ ᴛᴏ ᴀɴʏ  ᴍᴇᴅɪᴀ ᴛᴏ ɢᴇᴛ ʟɪɴᴋ</code>
 • /pbatch - <code>ᴜꜱᴇ ʏᴏᴜʀ ᴍᴇᴅɪᴀ ʟɪɴᴋ ᴡʜɪᴛʜ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ</code>
 • /batch - <code>ᴛᴏ ᴄʀᴇᴀᴛᴇ ʟɪɴᴋ ꜰᴏʀ ᴍᴜʟᴛɪᴩʟᴇ ꜰɪʟᴇꜱ</code>"""
+    
+    LYRICS_TXT = """<b>ʜᴇʟᴩ: ʟʏʀɪᴄꜱ</b>
