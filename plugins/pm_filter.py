@@ -527,20 +527,18 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.AI_TXT,
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
+        await query.edit_message_media(
+            InputMediaPhoto(random.choice(PICS), script.AI_TXT, enums.ParseMode.HTML),
+            reply_markup=reply_markup,            
         )
     elif query.data == "source":
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.SOURCE_TXT,
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
+        await query.edit_message_media(
+            InputMediaPhoto(random.choice(PICS), script.SOURCE_TXT, enums.ParseMode.HTML),
+            reply_markup=reply_markup,            
         )
     elif query.data == "manuelfilter":
         buttons = [[
