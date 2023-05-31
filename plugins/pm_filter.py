@@ -506,10 +506,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('ᴄᴀʀʙᴏɴ', callback_data='carb'),
         ], [
             InlineKeyboardButton('ꜱʜᴀʀᴇ ᴛᴇxᴛ', callback_data='sharetxt'), 
-            InlineKeyboardButton('ꜰɪʟᴇ ꜱᴛᴏʀᴇ', callback_data='newdata')
+            InlineKeyboardButton('ʟʏʀɪᴄꜱ', callback_data='lyrics '),
+            InlineKeyboardButton('ꜰɪʟᴇ ꜱᴛᴏʀᴇ', callback_data='newdata'),
         ], [
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help2'),
-            InlineKeyboardButton('ʜᴏᴍᴇ', callback_data='start')
+            InlineKeyboardButton('ɴᴇxᴛ', callback_data='help3')
          ]]
         reply_markup = InlineKeyboardMarkup(buttons)             
         await query.edit_message_media(  
@@ -733,6 +734,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,            
         )
         
+    elif query.data == "lyrics":
+        buttons = [[
+            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.edit_message_media(
+            InputMediaPhoto(random.choice(PICS), script.LYRICS_TXT, enums.ParseMode.HTML),
+            reply_markup=reply_markup,            
+        )
+        
     elif query.data == "admin":
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='extra')
@@ -741,7 +752,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         if query.from_user.id in ADMINS:
             await query.edit_message_media(InputMediaPhoto(random.choice(PICS), script.ADMIN_TXT, enums.ParseMode.HTML), reply_markup=reply_markup)
         else:
-            await query.answer("Your Not Authorizer ⚠️", show_alert=True)
+            await query.answer("ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴍʏ ᴀᴅᴍɪɴ", show_alert=True)
 
     elif query.data == "stats":
         buttons = [[
