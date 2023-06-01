@@ -519,6 +519,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "help3":
         buttons = [[
+           InlineKeyboardButton('ʏᴛᴅʟ', callback_data='ytdl')
+       ], [
            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
          ]]
         reply_markup = InlineKeyboardMarkup(buttons)             
@@ -751,7 +753,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InputMediaPhoto(random.choice(PICS), script.LYRICS_TXT, enums.ParseMode.HTML),
             reply_markup=reply_markup,            
         )
-        
+    elif query.data == "ytdl":
+        buttons = [[
+            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.edit_message_media(
+            InputMediaPhoto(random.choice(PICS), script.YTDL_TXT, enums.ParseMode.HTML),
+            reply_markup=reply_markup,            
+        )     
     elif query.data == "admin":
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='extra')
