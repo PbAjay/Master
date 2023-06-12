@@ -244,7 +244,7 @@ async def unban_a_user(bot, message):
 async def list_users(bot, message):
     # https://t.me/GetTGLink/4184
     raju = await message.reply('Getting List Of Users')
-    users = await db.get_all_users()
+    users = await db2.get_all_users()
     out = "Users Saved In DB Are:\n\n"
     async for user in users:
         out += f"<a href=tg://user?id={user['id']}>{user['name']}</a>"
