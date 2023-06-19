@@ -11,7 +11,7 @@ async def openai_ask(client, message):
     await ask_ai(client, m, message)
     
 async def ai(query):
-    openai.api_key = ""
+    openai.api_key = "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"
     response = openai.Completion.create(engine="text-davinci-003", prompt=query, max_tokens=100, n=1, stop=None, temperature=0.9, timeout=5)
     return response.choices[0].text.strip()
      
