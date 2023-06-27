@@ -38,6 +38,9 @@ DATABASE_URI2 = environ.get('DATABASE_URI', "mongodb+srv://1:1@cluster0.dtrwhwv.
 DATABASE_NAME2 = environ.get('DATABASE_NAME', "BOT2")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
+# New Addons
+OPENAI = environ.get('OPENAI', "")
+
 # Others
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', 0))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'TeamEvamaria')
