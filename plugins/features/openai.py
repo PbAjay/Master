@@ -1,6 +1,6 @@
 from pyrogram import Client, filters
 import openai
-from info import OPEN_Ai
+from info import OPENAi
 
 
 @Client.on_message(filters.command('openai'))
