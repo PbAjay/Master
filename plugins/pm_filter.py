@@ -486,48 +486,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InputMediaPhoto(random.choice(PICS), script.HELP_TXT.format(query.from_user.mention), enums.ParseMode.HTML),
             reply_markup=reply_markup,           
         )
-        
-    elif query.data == "help":
-        buttons = [[                               
-            InlineKeyboardButton('ᴏᴩᴇɴ ᴀɪ', callback_data='ai'),
-            InlineKeyboardButton('ᴛᴇʟᴇɢʀᴀᴘʜ', callback_data='tele'),
-            InlineKeyboardButton('ꜰᴏɴᴛ', callback_data='font')
-        ], [
-            InlineKeyboardButton('ɢɪᴛʜᴜʙ', callback_data='github'),
-            InlineKeyboardButton('ꜱᴏɴɢ', callback_data='song'),
-            InlineKeyboardButton('ʀᴇᴩᴏ', callback_data='repo')
-        ], [
-            InlineKeyboardButton('ᴜʀʟ ꜱʜᴏʀᴛ', callback_data='url'),
-            InlineKeyboardButton('ᴘɪɴɢ', callback_data='ping'),
-            InlineKeyboardButton('ᴡʀɪᴛᴇ', callback_data='write')
-        ], [
-            InlineKeyboardButton('ꜱᴛɪᴄᴋᴇʀ ɪᴅ', callback_data='sticker'),
-            InlineKeyboardButton('ᴊꜱoɴ', callback_data='json'),
-            InlineKeyboardButton('ᴄᴀʀʙᴏɴ', callback_data='carb'),
-        ], [
-            InlineKeyboardButton('ꜱʜᴀʀᴇ ᴛᴇxᴛ', callback_data='sharetxt'), 
-            InlineKeyboardButton('ʟʏʀɪᴄꜱ', callback_data='lyrics '),
-            InlineKeyboardButton('ꜰɪʟᴇ ꜱᴛᴏʀᴇ', callback_data='newdata')
-        ], [
-            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help2'),
-            InlineKeyboardButton('ɴᴇxᴛ', callback_data='help3')
-         ]]
-        reply_markup = InlineKeyboardMarkup(buttons)             
-        await query.edit_message_media(  
-            InputMediaPhoto(random.choice(PICS), script.HELP_TXT.format(query.from_user.mention), enums.ParseMode.HTML),
-            reply_markup=reply_markup,           
-        )
-    elif query.data == "help3":
-        buttons = [[
-           InlineKeyboardButton('ʏᴛᴅʟ', callback_data='ytdl')
-       ], [
-           InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
-         ]]
-        reply_markup = InlineKeyboardMarkup(buttons)             
-        await query.edit_message_media(  
-            InputMediaPhoto(random.choice(PICS), script.HELP_TXT.format(query.from_user.mention), enums.ParseMode.HTML),
-            reply_markup=reply_markup,           
-        )
     elif query.data == "about":
         buttons = [[
             InlineKeyboardButton('ᴏᴡɴᴇʀ', url='https://t.me/AjayZ_TG'),
@@ -541,14 +499,14 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InputMediaPhoto(random.choice(PICS), script.ABOUT_TXT.format(temp.B_NAME), enums.ParseMode.HTML),
             reply_markup=reply_markup,           
         )
-        
-    elif query.data == "ai":
+
+    elif query.data == "help":
         buttons = [[
-            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
+            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.edit_message_media(
-            InputMediaPhoto(random.choice(PICS), script.AI_TXT, enums.ParseMode.HTML),
+            InputMediaPhoto(random.choice(PICS), script.MULTIFEATURE_TXT, enums.ParseMode.HTML),
             reply_markup=reply_markup,            
         )
         
@@ -613,162 +571,14 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InputMediaPhoto(random.choice(PICS), script.EXTRAMOD_TXT, enums.ParseMode.HTML),
             reply_markup=reply_markup,            
         )
-        
-    elif query.data == "tele":
-        buttons = [[
-            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.edit_message_media(
-            InputMediaPhoto(random.choice(PICS), script.TELE_TXT, enums.ParseMode.HTML),
-            reply_markup=reply_markup,            
-        )
-        
-    elif query.data == "font":
-        buttons = [[
-            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.edit_message_media(
-            InputMediaPhoto(random.choice(PICS), script.FONT_TXT, enums.ParseMode.HTML),
-            reply_markup=reply_markup,            
-        )
-        
-    elif query.data == "github":
-        buttons = [[
-            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.edit_message_media(
-            InputMediaPhoto(random.choice(PICS), script.GITHUB_TXT, enums.ParseMode.HTML),
-            reply_markup=reply_markup,            
-        )
-        
-    elif query.data == "song":
-        buttons = [[
-            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.edit_message_media(
-            InputMediaPhoto(random.choice(PICS), script.SONG_TXT, enums.ParseMode.HTML),
-            reply_markup=reply_markup,            
-        )
-        
-    elif query.data == "repo":
-        buttons = [[
-            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.edit_message_media(
-            InputMediaPhoto(random.choice(PICS), script.REPO_TXT, enums.ParseMode.HTML),
-            reply_markup=reply_markup,            
-        )
-        
-    elif query.data == "url":
-        buttons = [[
-            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.edit_message_media(
-            InputMediaPhoto(random.choice(PICS), script.URL_TXT, enums.ParseMode.HTML),
-            reply_markup=reply_markup,            
-        )
-        
-    elif query.data == "ping":
-        buttons = [[
-            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.edit_message_media(
-            InputMediaPhoto(random.choice(PICS), script.PING_TXT, enums.ParseMode.HTML),
-            reply_markup=reply_markup,            
-        )
-        
-    elif query.data == "write":
-        buttons = [[
-            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.edit_message_media(
-            InputMediaPhoto(random.choice(PICS), script.WRITE_TXT, enums.ParseMode.HTML),
-            reply_markup=reply_markup,            
-        )
-        
-    elif query.data == "sticker":
-        buttons = [[
-            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.edit_message_media(
-            InputMediaPhoto(random.choice(PICS), script.STICKER_TXT, enums.ParseMode.HTML),
-            reply_markup=reply_markup,            
-        )
-        
-    elif query.data == "json":
-        buttons = [[
-            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.edit_message_media(
-            InputMediaPhoto(random.choice(PICS), script.JSON_TXT, enums.ParseMode.HTML),
-            reply_markup=reply_markup,            
-        )
-        
-    elif query.data == "carb":
-        buttons = [[
-            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.edit_message_media(
-            InputMediaPhoto(random.choice(PICS), script.CARBON_TXT, enums.ParseMode.HTML),
-            reply_markup=reply_markup,            
-        )
-        
-    elif query.data == "newdata":
-        buttons = [[
-            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.edit_message_media(
-            InputMediaPhoto(random.choice(PICS), script.NEWDATA_TXT, enums.ParseMode.HTML),
-            reply_markup=reply_markup,            
-        )
-        
-    elif query.data == "sharetxt":
-        buttons = [[
-            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.edit_message_media(
-            InputMediaPhoto(random.choice(PICS), script.SHARE_TXT, enums.ParseMode.HTML),
-            reply_markup=reply_markup,            
-        )
-        
-    elif query.data == "lyrics":
-        buttons = [[
-            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.edit_message_media(
-            InputMediaPhoto(random.choice(PICS), script.LYRICS_TXT, enums.ParseMode.HTML),
-            reply_markup=reply_markup,            
-        )
-    elif query.data == "ytdl":
-        buttons = [[
-            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.edit_message_media(
-            InputMediaPhoto(random.choice(PICS), script.YTDL_TXT, enums.ParseMode.HTML),
-            reply_markup=reply_markup,            
-        )     
     elif query.data == "admin":
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='extra')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         if query.from_user.id in ADMINS:
-            await query.edit_message_media(InputMediaPhoto(random.choice(PICS), script.ADMIN_TXT, enums.ParseMode.HTML), reply_markup=reply_markup)
+            await query.edit_message_media(
+                InputMediaPhoto(random.choice(PICS), script.ADMIN_TXT, enums.ParseMode.HTML), reply_markup=reply_markup)
         else:
             await query.answer("ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴍʏ ᴀᴅᴍɪɴ", show_alert=True)
 
