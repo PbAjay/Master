@@ -554,6 +554,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InputMediaPhoto(random.choice(PICS), script.MU5_TXT, enums.ParseMode.HTML),
             reply_markup=reply_markup,            
         )
+
+    elif query.data == "help7":
+        buttons = [[
+            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help2')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.edit_message_media(
+            InputMediaPhoto(random.choice(PICS), script.MU7_TXT, enums.ParseMode.HTML),
+            reply_markup=reply_markup,            
+        )
         
     elif query.data == "source":
         buttons = [[
