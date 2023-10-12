@@ -468,10 +468,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
         
         await query.answer('Piracy Is Crime')
-    elif query.data == "help2":
+    elif query.data == "help":
         buttons = [[
-            InlineKeyboardButton('ᴍᴏʀᴇ ꜰᴇᴀᴛᴜʀᴇꜱ', callback_data='help')
-         ],[
             InlineKeyboardButton('ᴍᴀɴᴜᴇʟ ꜰɪʟᴛᴇʀ', callback_data='manuelfilter'),
             InlineKeyboardButton('ᴀᴜᴛᴏ ꜰɪʟᴛᴇʀ', callback_data='autofilter')
         ], [
@@ -501,69 +499,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
 
     elif query.data == "help":
-        buttons = [[
-            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help2'),
-            InlineKeyboardButton('ɴᴇxᴛ', callback_data='help3')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.edit_message_media(
-            InputMediaPhoto(random.choice(PICS), script.MULTIFEATURE_TXT, enums.ParseMode.HTML),
-            reply_markup=reply_markup,            
-        )
-
-    elif query.data == "help3":
-        buttons = [[
-            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help'),
-            InlineKeyboardButton('ɴᴇxᴛ', callback_data='help4')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.edit_message_media(
-            InputMediaPhoto(random.choice(PICS), script.MU2_TXT, enums.ParseMode.HTML),
-            reply_markup=reply_markup,            
-        )
-
-    elif query.data == "help4":
-        buttons = [[
-            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help3'),
-            InlineKeyboardButton('ɴᴇxᴛ', callback_data='help5')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.edit_message_media(
-            InputMediaPhoto(random.choice(PICS), script.MU3_TXT, enums.ParseMode.HTML),
-            reply_markup=reply_markup,            
-        )
-
-    elif query.data == "help5":
-        buttons = [[
-            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help4'),
-            InlineKeyboardButton('ɴᴇxᴛ', callback_data='help6')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.edit_message_media(
-            InputMediaPhoto(random.choice(PICS), script.MU4_TXT, enums.ParseMode.HTML),
-            reply_markup=reply_markup,            
-        )
-
-    elif query.data == "help6":
-        buttons = [[
-            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help5'),
-            InlineKeyboardButton('ɴᴇxᴛ', callback_data='help7')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.edit_message_media(
-            InputMediaPhoto(random.choice(PICS), script.MU5_TXT, enums.ParseMode.HTML),
-            reply_markup=reply_markup,            
-        )
-
-    elif query.data == "help7":
-        buttons = [[
-            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help2')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.edit_message_media(
-            InputMediaPhoto(random.choice(PICS), script.MU7_TXT, enums.ParseMode.HTML),
-            reply_markup=reply_markup,            
-        )
+        b
         
     elif query.data == "source":
         buttons = [[
@@ -577,7 +513,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         
     elif query.data == "manuelfilter":
         buttons = [[
-            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help2'),
+            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help'),
             InlineKeyboardButton('ʙᴜᴛᴛᴏɴꜱ', callback_data='button')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -598,7 +534,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         
     elif query.data == "autofilter":
         buttons = [[
-            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help2')
+            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.edit_message_media(
@@ -608,7 +544,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         
     elif query.data == "coct":
         buttons = [[
-            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help2')
+            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.edit_message_media(
@@ -618,7 +554,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         
     elif query.data == "extra":
         buttons = [[
-            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help2'),
+            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help'),
             InlineKeyboardButton('ᴀᴅᴍɪɴ', callback_data='admin')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -639,7 +575,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "stats":
         buttons = [[
-            InlineKeyboardButton('«ʙᴀᴄᴋ', callback_data='help2'),
+            InlineKeyboardButton('« ʙᴀᴄᴋ', callback_data='help'),
             InlineKeyboardButton('↺ ʀᴇꜰʀᴇꜱʜ ↺', callback_data='rfrsh')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
